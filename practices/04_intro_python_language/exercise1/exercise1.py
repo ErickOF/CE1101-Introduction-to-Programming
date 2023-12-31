@@ -1,3 +1,33 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+"""
+Author: Erick Andres Obregon Fonseca
+Copyright: Copyright 2016, CE1101-Introduction-to-Programming
+Credits: Erick Andres Obregon Fonseca
+License: MIT
+Version: 1.0.0
+Maintainer: Erick Andres Obregon Fonseca
+Email: erickobregonf@gmail.com,erickof@ieee.org,erickof@estudiantec.cr
+Status: Development
+
+Description:
+    In a Python script, declare, initialize, and display with the print function at least one
+    variable with each type seen in this presentation.
+
+Usage:
+    $python exercise1.py
+"""
+
+__author__ = "Erick Andres Obregon Fonseca"
+__copyright__ = "Copyright 2016, CE1101-Introduction-to-Programming"
+__credits__ = ["Erick Andres Obregon Fonseca"]
+__license__ = "MIT"
+__version__ = "1.0.0"
+__maintainer__ = "Erick Andres Obregon Fonseca"
+__email__ = "erickobregonf@gmail.com,erickof@ieee.org,erickof@estudiantec.cr"
+__status__ = "Development"
+
 from array import array
 from typing import *
 
