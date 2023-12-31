@@ -16,7 +16,7 @@ Description:
     Spanish translation as a key.
 
 Usage:
-    $python exercise1.py
+    $python dict_es_en.py
 """
 
 from typing import *
