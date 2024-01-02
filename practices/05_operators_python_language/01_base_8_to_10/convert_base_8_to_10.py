@@ -34,6 +34,14 @@ from typing import *
 
 
 def convert_base_8_to_10(number: int) -> int:
+    """Convert from base 8 (octal) to base 10.
+
+    Args:
+        number (int): 3 digits number to convert.
+
+    Returns:
+        int: number in base 10.
+    """
     # Converted number
     ## First digit * 8**0
     base10: int = (number % 10)
@@ -62,6 +70,7 @@ def get_input_num() -> int:
 
 
 if __name__ == '__main__':
+    # Get the number to convert
     number: int = get_input_num()
 
     # Validate if input number is valid
@@ -69,5 +78,3 @@ if __name__ == '__main__':
         print('Number must have 3 digits')
     else:
         print(convert_base_8_to_10(number))
-
-
