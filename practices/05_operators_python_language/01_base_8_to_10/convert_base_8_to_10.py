@@ -33,6 +33,20 @@ __status__ = "Development"
 from typing import *
 
 
+def check_valid_digits(number: int) -> bool:
+    """Check that each digit is valid for base 8 (octal).
+
+    Args:
+        number (int): number to validate.
+
+    Returns:
+        bool: True if it's valid, False otherwise.
+    """
+    if ((number % 10) > 7) or (((number // 10) % 10) > 7) or (((number // 100) % 10) > 7):
+        return False
+    else:
+        return True
+
 def convert_base_8_to_10(number: int) -> int:
     """Convert from base 8 (octal) to base 10.
 
@@ -73,8 +87,11 @@ if __name__ == '__main__':
     # Get the number to convert
     number: int = get_input_num()
 
-    # Validate if input number is valid
+    # Validate that input number has 3 digits
     if number == -1:
         print('Number must have 3 digits')
+    # Validate that input number has digits between 0 and 7
+    elif not check_valid_digits(number):
+        print('Number must have digits between 0 and 7.')
     else:
         print(convert_base_8_to_10(number))
