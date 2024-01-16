@@ -12,8 +12,8 @@ Email: erickobregonf@gmail.com,erickof@ieee.org,erickof@estudiantec.cr
 Status: Development
 
 Description:
-    In a Python script, declare, initialize, and display with the print function at least one
-    variable with each type seen in this presentation.
+    Write a program that passes a 3-digit number from base 8 (octal) to base
+    10.
 
 Usage:
     $python convert_base_8_to_10.py
@@ -30,41 +30,38 @@ __status__ = "Development"
 
 
 
-from typing import *
-
-
-def check_valid_digits(number: int) -> bool:
+def check_valid_digits(num: int) -> bool:
     """Check that each digit is valid for base 8 (octal).
 
     Args:
-        number (int): number to validate.
+        num (int): num to validate.
 
     Returns:
         bool: True if it's valid, False otherwise.
     """
-    if ((number % 10) > 7) or (((number // 10) % 10) > 7) or (((number // 100) % 10) > 7):
+    if ((num % 10) > 7) or (((num // 10) % 10) > 7) or (((num // 100) % 10) > 7):
         return False
     else:
         return True
 
-def convert_base_8_to_10(number: int) -> int:
+def convert_base_8_to_10(num: int) -> int:
     """Convert from base 8 (octal) to base 10.
 
     Args:
-        number (int): 3 digits number to convert.
+        num (int): 3 digits num to convert.
 
     Returns:
-        int: number in base 10.
+        int: num in base 10.
     """
-    # Converted number
+    # Converted num
     ## First digit * 8**0
-    base10: int = (number % 10)
-    number //= 10
+    base10: int = num % 10
+    num //= 10
     ## Second digit * 8**1
-    base10 += (number % 10) * 8
-    number //= 10
+    base10 += (num % 10) * 8
+    num //= 10
     ## Third digit * 8**2
-    base10 += (number % 10) * 64
+    base10 += (num % 10) * 64
 
     return base10
 
@@ -74,11 +71,11 @@ def get_input_num() -> int:
     Returns:
         int: 3 digits number or -1 if an invalid number is given.
     """
-    number: int = int(input('Enter a 3 digits number: '))
+    num: int = int(input('Enter a 3 digits number: '))
 
     # Check if the number has 3 digits
-    if 100 < abs(number) < 999:
-        return number
+    if 100 < abs(num) < 999:
+        return num
     else:
         return -1
 
